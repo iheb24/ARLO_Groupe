@@ -41,4 +41,5 @@ un fichier de log est automatiquement créer dans le répertoire courant `log.tx
 ### Execution réussite 
 ![reussi](png/log1.png)
 
-### Execution echoué 
+### Execution echoué ( kafka non démarré
+![reussi](png/log1.png)
