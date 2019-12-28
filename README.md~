@@ -17,11 +17,6 @@ cd kafka_2.12-2.4.0
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
 ````
-## creation d'un topic (premier démarrage)
-````
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092
---replication-factor 1 --partitions 1 --topic topicTest
-````
 ## installation & Lancement ngrok 
 ````sh
 snap install ngrok 
@@ -40,7 +35,6 @@ cd executables
 # copier l'adresse du serveur dans urlConfig.ini
 java -jar client.jar
 ````
-
 # Fichiers de logs 
 un fichier de log est automatiquement créer dans le répertoire courant `log.txt`
 ## Exemples de logs
