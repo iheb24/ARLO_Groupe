@@ -1,0 +1,5 @@
+/bin/
+.idea
+/out/
+.DS_Store
+/src/META-INF/

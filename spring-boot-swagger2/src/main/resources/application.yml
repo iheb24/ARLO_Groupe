@@ -1,0 +1,22 @@
+# Loco yaml export: Simple YAML object
+# Project: application.properties conversion
+# Release: Working copy
+# Locale: fr-FR, French (France)
+# Exported by: Unregistered user
+# Exported at: Sun, 01 Dec 2019 17:53:46 +0100
+---
+server.contextPath: /swagger2-demo
+server.port: "9090"
+spring:
+  kafka:
+   consumer:
+    bootstrap-servers: localhost:9092
+    group-id: group_id
+    auto-offset-reset: earliest
+    key-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+    value-deserializer: org.apache.kafka.common.serialization.StringDeserializer
+   producer:
+    bootstrap-servers: localhost:9092
+    key-serializer: org.apache.kafka.common.serialization.StringSerializer
+    value-serializer: org.apache.kafka.common.serialization.StringSerializer
+...

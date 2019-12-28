@@ -1,0 +1,6 @@
+déc. 27, 2019 3:08:22 PM com.example.springbootswagger2.controller.ElevesController <init>
+INFOS: Successfully connected to Kafka server
+déc. 27, 2019 3:09:06 PM com.example.springbootswagger2.controller.ElevesController postEleve
+INFOS: Message produit: {"Personne":{"id":"2e71dcf6-b95d-4e61-927c-5b95ddbbd200","prenom":"Hadil","nom":"BESBES","email":"aa@bb.cc","status":"eleve"},"event":"create"}
+déc. 27, 2019 3:09:27 PM com.example.springbootswagger2.controller.ElevesController deleteEleve
+INFOS: Message produit: {"Personne":{"id":"2e71dcf6-b95d-4e61-927c-5b95ddbbd200","prenom":"Hadil","nom":"BESBES","email":"aa@bb.cc","status":"eleve"},"event":"delete"}
