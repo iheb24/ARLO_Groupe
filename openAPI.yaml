@@ -1,0 +1,402 @@
+swagger: "2.0"
+info:
+  description: "This is the OpenAPI description of the API exposed by ARLO PROJECT server side."
+  version: "2.0.0"
+  title: "ARLO"
+
+
+host: "localhost:9092"
+basePath: "/"
+
+
+schemes:
+  - "http"
+paths:
+
+
+  /eleve:
+    get:
+      tags:
+        - "Obtenir tous etudiants"
+      summary: "Obtenir tous etudiants"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/eleve'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    post:
+      tags:
+        - "creer un etudiant"
+      summary: "creer un etudiant"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: etudiants item
+          description: etudiants item to add
+          required: true
+          schema:
+            $ref: '#/definitions/eleve'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/eleve'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    put:
+      tags:
+        - "mise a jour etudiants"
+      summary: "mise a jour etudiants"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: etudiants item
+          description: etudiants item to add
+          required: true
+          schema:
+            $ref: '#/definitions/eleve'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/eleve'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    delete:
+      tags:
+        - "supprimer etudiant"
+      summary: "supprimer etudiant"
+
+      parameters:
+        - name: id
+          in: path
+          description: ID of etudiants to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Suceess|OK"
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+  /UE:
+    get:
+      tags:
+        - "Obtenir tous UE"
+      summary: "Obtenir UE"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/UE'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    post:
+      tags:
+        - "creer UE"
+      summary: "creer UE"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: UE item
+          description: UE item to add
+          required: true
+          schema:
+            $ref: '#/definitions/UE'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/UE'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    put:
+      tags:
+        - "mise a jour UE"
+      summary: "mise a jour UE"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: UE item
+          description: UE item to add
+          required: true
+          schema:
+            $ref: '#/definitions/UE'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/eleve'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    delete:
+      tags:
+        - "supprimer UE"
+      summary: "supprimer UE"
+
+      parameters:
+        - name: id
+          in: path
+          description: ID of UE to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Suceess|OK"
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+  /groupe:
+    get:
+      tags:
+        - "Obtenir tous les groupes"
+      summary: "Obtenir tous groupes"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/groupe'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    post:
+      tags:
+        - "creer un groupe"
+      summary: "creer un groupe"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: group item
+          description: group item to add
+          required: true
+          schema:
+            $ref: '#/definitions/groupe'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/groupe'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    delete:
+      tags:
+        - "supprimer groupe"
+      summary: "supprimer groupe"
+
+      parameters:
+        - name: id
+          in: path
+          description: ID of group to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Suceess|OK"
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+  /sujet:
+    get:
+      tags:
+        - "Obtenir tous les sujets"
+      summary: "Obtenir tous les sujets"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            type: array
+            items:
+              $ref: '#/definitions/sujet'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    post:
+      tags:
+        - "creer un sujet"
+      summary: "creer un sujet"
+
+      consumes:
+        - "application/json"
+      produces:
+        - "application/json"
+      parameters:
+        - in: body
+          name: sujet
+          description: sujet item to add
+          required: true
+          schema:
+            $ref: '#/definitions/sujet'
+      responses:
+        200:
+          description: "Suceess|OK"
+          schema:
+            $ref: '#/definitions/sujet'
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+    delete:
+      tags:
+        - "supprimer sujet"
+      summary: "supprimer sujet"
+      parameters:
+        - name: id
+          in: path
+          description: ID of sujet to delete
+          required: true
+          type: string
+      responses:
+        200:
+          description: "Suceess|OK"
+        401:
+          description: "not authorized!"
+        403:
+          description: "forbidden!!!"
+        404:
+          description: "not found!!!"
+
+
+
+
+definitions:
+  eleve:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      nom:
+        type: "string"
+      prenom:
+        type: "string"
+      email:
+        type: "string"
+
+  sujet:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      nom:
+        type: "string"
+      description:
+        type: "string"
+  groupe:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      nom:
+        type: "string"
+
+  UE:
+    type: "object"
+    properties:
+      id:
+        type: "string"
+      nom:
+        type: "string"
+      code:
+        type: "string"
+      cours:
+        type: "number"
+      td:
+        type: "number"
+      tp:
+        type: "number"
+      valeur:
+        type: "number"
+      description:
+        type: "string"
