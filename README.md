@@ -49,3 +49,11 @@ un fichier de log est automatiquement créer dans le répertoire courant `log.tx
 
 ### Execution echoué ( kafka non démarré )
 ![reussi](png/log2.png)
+
+# API
+## Open API 
+[swagger IU](https://app.swaggerhub.com/apis/ilyesAj8/arlo2/2.0.0#free)
+# REST API documentation 
+[API](https://ilyesaj.github.io/swagger-ressources/)
+
+la page API est géneré a partir de : [Repo](https://github.com/ilyesAj/swagger-ressources)
