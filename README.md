@@ -8,7 +8,7 @@
 - Resolution des dépendances externes du serveur et packaging du serveur en jar
 - Démarrage du serveur en une seule commande 
 # Lancement Client-serveur
-## installation & Lancement kafka 
+## Installation & Lancement kafka 
 (version tested  kafka_2.12-2.4.0)
 ````sh
 wget http://mirrors.ircam.fr/pub/apache/kafka/2.4.0/kafka_2.12-2.4.0.tgz
@@ -17,12 +17,12 @@ cd kafka_2.12-2.4.0
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
 ````
-## creation d'un topic (premier démarrage)
+## Creation d'un topic (premier démarrage)
 ````
 bin/kafka-topics.sh --create --bootstrap-server localhost:9092
---replication-factor 1 --partitions 1 --topic topicTest
+--replication-factor 1 --partitions 1 --topic topictest
 ````
-## installation & Lancement ngrok 
+## Installation & Lancement ngrok 
 ````sh
 snap install ngrok 
 # brew install ngrok 
