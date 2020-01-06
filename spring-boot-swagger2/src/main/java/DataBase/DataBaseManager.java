@@ -60,6 +60,8 @@ public class DataBaseManager implements DatabaseInterface {
 					+ " FOREIGN KEY(IdentifiantGroupe) REFERENCES Groupe(Identifiant)) ";
 			
 
+			String drp = "DROP TABLE ";
+
 
 
 

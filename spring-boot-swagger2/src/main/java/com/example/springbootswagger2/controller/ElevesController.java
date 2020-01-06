@@ -57,7 +57,7 @@ public class ElevesController {
 	
 
 
-	@KafkaListener(topics = "topictest", group= "group_id" )
+	@KafkaListener(topics = {"topictest", "UE", "Personne"}, group= "group_id" )
 	public void consume(String message){
 		if (!checker.check())
 			send.warning("Connection to Kafka server failed");
@@ -210,7 +210,7 @@ public class ElevesController {
 		DataBaseManager.insertEleve(newEleve.getId(),newEleve.getPrenom(),newEleve.getNom(),newEleve.getEmail());
 		String msg = CreateJSON.eleveJSON(newEleve.getId(),newEleve.getPrenom(),newEleve.getNom(),newEleve.getEmail(), "create");
 
-		prod.sendMessage(msg);
+		prod.sendMessage(msg, "Personne");
 		send.info("Message produit: "+msg);
 		
 
@@ -224,7 +224,7 @@ public class ElevesController {
 		DataBaseManager.delete(newEleve.getId(),"Eleve");
 		DataBaseManager.insertEleve(newEleve.getId(),newEleve.getPrenom(),newEleve.getNom(),newEleve.getEmail());
 		String msg = CreateJSON.eleveJSON(newEleve.getId(),newEleve.getPrenom(),newEleve.getNom(),newEleve.getEmail(), "update");
-		prod.sendMessage(msg);
+		prod.sendMessage(msg,"Personne");
 		send.info("Message produit: "+msg);
 	}
 	@DeleteMapping(value = "/eleve/{id}")
@@ -235,7 +235,7 @@ public class ElevesController {
 		Eleve e = DataBaseManager.selectEleveWithId(id);
 		DataBaseManager.delete(id,"Eleve");
 		String msg = CreateJSON.eleveJSON(id, e.getNom(), e.getPrenom(), e.getEmail(), "delete");
-		prod.sendMessage(msg);
+		prod.sendMessage(msg,"Personne");
 		send.info("Message produit: "+msg);
 	}
 	
@@ -247,7 +247,7 @@ public class ElevesController {
 		unite.setDescription(unite.getDescription().replace("_"," "));
 		DataBaseManager.insertUE(unite.getId(),unite.getNom(),unite.getDescription(),unite.getCode(),unite.getCours(),unite.getTd(),unite.getTp(),unite.getValeur());
 		String msg = CreateJSON.UeJSON(unite.getId(), unite.getCode(), unite.getNom(), unite.getCours(), unite.getTd(), unite.getTp(), unite.getValeur(), "create");
-		prod.sendMessage(msg);
+		prod.sendMessage(msg, "UE");
 		send.info("Message produit: "+msg);
 	}
 	
@@ -260,7 +260,7 @@ public class ElevesController {
 		DataBaseManager.delete(unite.getId(),"UniteEnseignement");
 		DataBaseManager.insertUE(unite.getId(),unite.getNom(),unite.getDescription(),unite.getCode(),unite.getCours(),unite.getTd(),unite.getTp(),unite.getValeur());
 		String msg = CreateJSON.UeJSON(unite.getId(), unite.getCode(), unite.getNom(), unite.getCours(), unite.getTd(), unite.getTp(), unite.getValeur(), "update");
-		prod.sendMessage(msg);
+		prod.sendMessage(msg, "UE");
 		send.info("Message produit: "+msg);
 	}
 	
@@ -272,7 +272,7 @@ public class ElevesController {
 		Unite ue = DataBaseManager.selectUniteWithId(id);
 		DataBaseManager.delete(id,"UniteEnseignement");
 		String msg = CreateJSON.UeJSON(id, ue.getCode(), ue.getNom(), ue.getCours(), ue.getTd(), ue.getTp(), ue.getValeur(), "delete");
-		prod.sendMessage(msg);
+		prod.sendMessage(msg, "UE");
 		send.info("Message produit: "+msg);
 	}
 	

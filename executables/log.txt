@@ -1,12 +1,2 @@
-déc. 28, 2019 2:16:26 PM com.example.springbootswagger2.controller.ElevesController <init>
+janv. 06, 2020 3:15:29 PM com.example.springbootswagger2.controller.ElevesController <init>
 INFOS: Successfully connected to Kafka server
-déc. 28, 2019 2:18:29 PM com.example.springbootswagger2.controller.ElevesController postEleve
-INFOS: Message produit: {"Personne":{"id":"ab756d0b-3f4f-4c19-8682-6e1fbb3f7ad7","prenom":"Cyrine","nom":"JOOBER","email":"a@b.c","status":"eleve"},"event":"create"}
-déc. 28, 2019 2:18:46 PM com.example.springbootswagger2.controller.ElevesController putEleve
-INFOS: Message produit: {"Personne":{"id":"ab756d0b-3f4f-4c19-8682-6e1fbb3f7ad7","prenom":"JOOBER","nom":"Cyrine","email":"a@b.c","status":"eleve"},"event":"update"}
-déc. 28, 2019 2:20:21 PM com.example.springbootswagger2.controller.ElevesController deleteEleve
-INFOS: Message produit: {"Personne":{"id":"6bf117fc-bcc3-4bbf-82bf-2174c1dad049","prenom":"BESBES","nom":"Iheb","email":"aa@bb.cc","status":"eleve"},"event":"delete"}
-déc. 28, 2019 2:20:36 PM com.example.springbootswagger2.controller.ElevesController postEleve
-INFOS: Message produit: {"Personne":{"id":"60d70536-8b1a-4e72-96b1-5f73190eb58a","prenom":"Iheb","nom":"BESBES","email":"a@b.x","status":"eleve"},"event":"create"}
-déc. 28, 2019 2:25:43 PM com.example.springbootswagger2.controller.ElevesController putUE
-INFOS: Message produit: {"UE":{"td":20,"code":"IATIC","valeur":1.5,"id":"87c823f2-3e96-440d-9033-cdfe556920df","tp":33,"intitule":"Math","cours":20},"event":"update"}

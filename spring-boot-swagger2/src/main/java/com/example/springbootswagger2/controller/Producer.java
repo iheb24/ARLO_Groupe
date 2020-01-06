@@ -18,7 +18,7 @@ public class Producer {
 
 
 
-    public void sendMessage(String message) {
-        this.kafkaTemplate.send(TOPIC, message);
+    public void sendMessage(String message, String topic) {
+        this.kafkaTemplate.send(topic, message);
     }
 }
