@@ -8,7 +8,7 @@
 - Resolution des dépendances externes du serveur et packaging du serveur en jar
 - Démarrage du serveur en une seule commande 
 # Lancement Client-serveur
-## Installation & Lancement kafka 
+## installation & Lancement kafka 
 (version tested  kafka_2.12-2.4.0)
 ````sh
 wget http://mirrors.ircam.fr/pub/apache/kafka/2.4.0/kafka_2.12-2.4.0.tgz
@@ -17,12 +17,7 @@ cd kafka_2.12-2.4.0
 bin/zookeeper-server-start.sh config/zookeeper.properties
 bin/kafka-server-start.sh config/server.properties
 ````
-## Creation d'un topic (premier démarrage)
-````
-bin/kafka-topics.sh --create --bootstrap-server localhost:9092
---replication-factor 1 --partitions 1 --topic topictest
-````
-## Installation & Lancement ngrok 
+## installation & Lancement ngrok 
 ````sh
 snap install ngrok 
 # brew install ngrok 
@@ -40,7 +35,6 @@ cd executables
 # copier l'adresse du serveur dans urlConfig.ini
 java -jar client.jar
 ````
-
 # Fichiers de logs 
 un fichier de log est automatiquement créer dans le répertoire courant `log.txt`
 ## Exemples de logs
@@ -49,11 +43,3 @@ un fichier de log est automatiquement créer dans le répertoire courant `log.tx
 
 ### Execution echoué ( kafka non démarré )
 ![reussi](png/log2.png)
-
-# API
-## Open API 
-[swagger IU](https://app.swaggerhub.com/apis/ilyesAj8/arlo2/2.0.0#free)
-# REST API documentation 
-[API](https://ilyesaj.github.io/swagger-ressources/)
-
-la page API est géneré a partir de : [Repo](https://github.com/ilyesAj/swagger-ressources)

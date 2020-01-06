@@ -1,2 +1,2 @@
-janv. 06, 2020 3:15:29 PM com.example.springbootswagger2.controller.ElevesController <init>
-INFOS: Successfully connected to Kafka server
+Dec 28, 2019 3:27:48 PM com.example.springbootswagger2.controller.ElevesController <init>
+INFO: Successfully connected to Kafka server
